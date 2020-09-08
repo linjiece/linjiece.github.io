@@ -6,7 +6,7 @@
   <link href="https://linjiece.github.io/atom.xml" rel="self"/>
   
   <link href="https://linjiece.github.io/"/>
-  <updated>2020-09-02T10:46:52.289Z</updated>
+  <updated>2020-09-08T10:16:02.128Z</updated>
   <id>https://linjiece.github.io/</id>
   
   <author>
@@ -21,15 +21,16 @@
     <link href="https://linjiece.github.io/2020/08/28/learning/"/>
     <id>https://linjiece.github.io/2020/08/28/learning/</id>
     <published>2020-08-27T16:00:06.000Z</published>
-    <updated>2020-09-02T10:46:52.289Z</updated>
+    <updated>2020-09-08T10:16:02.128Z</updated>
     
-    <content type="html"><![CDATA[<p>参见<a href="http://theme-next.iissnan.com/getting-started.html">NexT</a></p><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">坑点:主_config.yml下language值填写，与主题下languaes/&#123;language&#125;.yml的&#123;language&#125;要保持一致，否则无法映射对应的语言</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>参见<a href="http://theme-next.iissnan.com/getting-started.html">NexT</a></p><div class="note ">            <p><b>Header</b><br>(without define class style)</p>          </div><div class="note info no-icon">            <p><b>注意</b><br>站点配置文件下language值填写，应与主题下languaes/$(language).yml的$(language)要保持一致，否则无法映射对应的语言</p>          </div><blockquote class="blockquote-center">            <i class="fa fa-quote-left"></i>                        <i class="fa fa-quote-right"></i>          </blockquote>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;参见&lt;a href=&quot;http://theme-next.iissnan.com/getting-started.html&quot;&gt;NexT&lt;/a&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight tex&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;</summary>
+&lt;div class=&quot;note &quot;&gt;
+            &lt;p&gt;&lt;b&gt;Header&lt;/b&gt;&lt;br&gt;(without </summary>
       
     
     
