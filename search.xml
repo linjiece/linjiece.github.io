@@ -3,15 +3,23 @@
   <entry>
     <title>dom4j解析xml</title>
     <url>/2020/09/08/dom4j%E8%A7%A3%E6%9E%90xml/</url>
-    <content><![CDATA[<h2 id="dom4j生成xml"><a href="#dom4j生成xml" class="headerlink" title="dom4j生成xml"></a>dom4j生成xml</h2><p>1 &gt;创建Document实例</p>
+    <content><![CDATA[<h2 id="dom4j生成xml"><a href="#dom4j生成xml" class="headerlink" title="dom4j生成xml"></a>dom4j生成xml</h2><ul>
+<li>创建Document实例</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Document doc = DocumentHelper.creatDocument();</span><br></pre></td></tr></table></figure>
 
-<p>2 &gt;添加根节点及子节点</p>
+<ul>
+<li>添加根节点及子节点</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Element root = doc.addElement(<span class="string">&quot;root&quot;</span>);</span><br><span class="line">Element child = root.addElement(<span class="string">&quot;data&quot;</span>)</span><br><span class="line">                    .addAttribute(<span class="string">&quot;type&quot;</span>,<span class="string">&quot;01&quot;</span>)</span><br><span class="line">                    .addText(<span class="string">&quot;dataText&quot;</span>);</span><br></pre></td></tr></table></figure>
 
-<p>3 &gt;生成xml</p>
+<ul>
+<li>生成xml</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">OutputFormat format = OutputFormat.createPrettyPrint();</span><br><span class="line">XMLWriter writer = <span class="keyword">new</span> XMLWriter(<span class="keyword">new</span> FileOutputStream(file), format);</span><br><span class="line">writer.write(doc);</span><br></pre></td></tr></table></figure>
-<h2 id="解析xml"><a href="#解析xml" class="headerlink" title="解析xml"></a>解析xml</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个SAXReader解析器</span></span><br><span class="line">SAXReader reader = <span class="keyword">new</span> SAXReader();</span><br><span class="line"><span class="comment">// 读取xml文件,转换成Document结点</span></span><br><span class="line">Document doc = reader.read(file);</span><br><span class="line">Element root = doc.getRootElement();</span><br><span class="line">List&lt;Element&gt; childElements = root.elements();</span><br><span class="line"><span class="keyword">for</span> (Element child : childElements) &#123;</span><br><span class="line"><span class="comment">//xxxxxxxx</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//output</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+<h2 id="解析xml"><a href="#解析xml" class="headerlink" title="解析xml"></a>解析xml</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个SAXReader解析器</span></span><br><span class="line">SAXReader reader = <span class="keyword">new</span> SAXReader();</span><br><span class="line"><span class="comment">// 读取xml文件,转换成Document结点</span></span><br><span class="line">Document doc = reader.read(file);</span><br><span class="line">Element root = doc.getRootElement();</span><br><span class="line">List&lt;Element&gt; childElements = root.elements();</span><br><span class="line"><span class="keyword">for</span> (Element child : childElements) &#123;</span><br><span class="line"><span class="comment">//xxxxxxxx</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//output</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
       <tags>
         <tag>java</tag>
         <tag>dom4j</tag>
