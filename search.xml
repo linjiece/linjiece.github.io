@@ -37,6 +37,9 @@
 <h2 id="解析xml"><a href="#解析xml" class="headerlink" title="解析xml"></a>解析xml</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个SAXReader解析器</span></span><br><span class="line">SAXReader reader = <span class="keyword">new</span> SAXReader();</span><br><span class="line"><span class="comment">// 读取xml文件,转换成Document结点</span></span><br><span class="line">Document doc = reader.read(file);</span><br><span class="line">Element root = doc.getRootElement();</span><br><span class="line">List&lt;Element&gt; childElements = root.elements();</span><br><span class="line"><span class="keyword">for</span> (Element child : childElements) &#123;</span><br><span class="line"><span class="comment">//xxxxxxxx</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//output</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
       <tags>
         <tag>java</tag>
         <tag>dom4j</tag>
