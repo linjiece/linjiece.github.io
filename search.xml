@@ -46,6 +46,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/08/27/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Hexo-NexT</title>
     <url>/2020/08/28/learning/</url>
     <content><![CDATA[<p>参见<a href="http://theme-next.iissnan.com/getting-started.html">NexT</a></p>
@@ -67,22 +85,26 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/08/27/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>leetcode-[530]二叉搜索树的最小绝对差</title>
+    <url>/2020/10/12/leetcode-530-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E7%BB%9D%E5%AF%B9%E5%B7%AE/</url>
+    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><div class="note info no-icon">
+            <p><b>给你一棵所有节点为非负值的二叉搜索树，请你计算树中任意两节点的差的绝对值的最小值。</b></p><ul><li><strong>示例</strong>：</li><li><strong>输入</strong>：<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"> \</span><br><span class="line">  <span class="number">3</span></span><br><span class="line"> /</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure></li><li><strong>输出</strong>：<figure class="highlight basic"><table><tr><td class="code"><pre><span class="line"><span class="symbol">1 </span></span><br></pre></td></tr></table></figure></li><li><strong>解释</strong>：<br><code>最小绝对差为 1，其中 2 和 1 的差的绝对值为 1（或者 2 和 3）。</code></li><li><strong>提示</strong>：<br><code>树中至少有 2 个节点。</code></li></ul>
+          </div>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><div class="note success no-icon">
+            <p>二叉搜索树的中序遍历结果为升序,遍历前后两节点值的差的绝对值即为最小绝对值差</p>
+          </div>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> min=Integer.MAX_VALUE;</span><br><span class="line">    TreeNode pre =<span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getMinimumDifference</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        dfs(root);</span><br><span class="line">        <span class="keyword">return</span> min;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span>  <span class="title">dfs</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="keyword">null</span>)<span class="keyword">return</span>;</span><br><span class="line">        dfs(root.left);</span><br><span class="line">        <span class="keyword">if</span>(pre!=<span class="keyword">null</span>)</span><br><span class="line">            min =Math.min(min,root.val-pre.val);</span><br><span class="line">        pre = root;</span><br><span class="line">        dfs(root.right);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
   </entry>
   <entry>
     <title>leetcode-1024-视频拼接</title>
@@ -105,28 +127,6 @@
       <tags>
         <tag>贪心算法</tag>
         <tag>动态规划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>leetcode-[530]二叉搜索树的最小绝对差</title>
-    <url>/2020/10/12/leetcode-530-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E7%BB%9D%E5%AF%B9%E5%B7%AE/</url>
-    <content><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><div class="note info no-icon">
-            <p><b>给你一棵所有节点为非负值的二叉搜索树，请你计算树中任意两节点的差的绝对值的最小值。</b></p><ul><li><strong>示例</strong>：</li><li><strong>输入</strong>：<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"> \</span><br><span class="line">  <span class="number">3</span></span><br><span class="line"> /</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure></li><li><strong>输出</strong>：<figure class="highlight basic"><table><tr><td class="code"><pre><span class="line"><span class="symbol">1 </span></span><br></pre></td></tr></table></figure></li><li><strong>解释</strong>：<br><code>最小绝对差为 1，其中 2 和 1 的差的绝对值为 1（或者 2 和 3）。</code></li><li><strong>提示</strong>：<br><code>树中至少有 2 个节点。</code></li></ul>
-          </div>
-
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><div class="note success no-icon">
-            <p>二叉搜索树的中序遍历结果为升序,遍历前后两节点值的差的绝对值即为最小绝对值差</p>
-          </div>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> min=Integer.MAX_VALUE;</span><br><span class="line">    TreeNode pre =<span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getMinimumDifference</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        dfs(root);</span><br><span class="line">        <span class="keyword">return</span> min;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span>  <span class="title">dfs</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="keyword">null</span>)<span class="keyword">return</span>;</span><br><span class="line">        dfs(root.left);</span><br><span class="line">        <span class="keyword">if</span>(pre!=<span class="keyword">null</span>)</span><br><span class="line">            min =Math.min(min,root.val-pre.val);</span><br><span class="line">        pre = root;</span><br><span class="line">        dfs(root.right);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>leetcode</category>
-      </categories>
-      <tags>
-        <tag>leetcode</tag>
       </tags>
   </entry>
 </search>
